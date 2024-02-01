@@ -98,13 +98,19 @@ Form Button {
   align-items: center;
   float: left;
   /* background-color: #313131; */
-  background: rgb(43, 47, 60);
+  /* background: rgb(43, 47, 60); */
   border-radius: 8px;
   color: #eee;
   width: 30%;
-  height: 480px;
+  /* max-height: 460px; */
   margin-right: 20px;
-  padding: 20px;
+}
+
+.user-items {
+  max-height: 430px;
+  overflow: auto;
+  color: #fff;
+  padding: 10px;
 }
 
 .user-container {
@@ -121,12 +127,15 @@ Form Button {
 
 .chat {
   display: grid;;
+  background: rgb(43, 47, 60);
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .message-container {
   height: 400px;
   /* background-color: #eee; */
-  background: rgb(43, 47, 60);
+  /* background: rgb(43, 47, 60); */
   overflow: auto;
   border-radius: 8px;
   margin-bottom: 3px;
@@ -137,6 +146,7 @@ Form Button {
   text-align: right;
   padding-right: 5px;
   font-size: 18px;
+  margin-top: 25px;
 }
 
 .user-message-left {
@@ -151,7 +161,13 @@ Form Button {
   padding: 10px;
   color: white;
   border-radius: 17px;
-  margin-top: 3px;
+}
+
+.message-joined {
+  display: flex;
+  justify-content: center;
+  color: #eee;
+  font-size: 0.8rem;
 }
 
 .from-user {
@@ -169,4 +185,13 @@ Form Button {
 
 .toast-panel {
   border-color: #242424;
+}
+
+.send-message {
+  display: flex;
+  flex-direction: row;
+}
+
+.send-message-form {
+  color: #eee;
 }

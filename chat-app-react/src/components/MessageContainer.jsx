@@ -1,4 +1,8 @@
 import { useEffect, useRef } from "react";
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import FaceIcon from '@mui/icons-material/Face';
+
 
 const MessageContainer = ({messages}) => {
     const messageRef = useRef();
@@ -17,10 +21,13 @@ const MessageContainer = ({messages}) => {
     return (
         <div ref={messageRef} className="message-container">
             { messages.map((m, index) => 
+                !m.msg.includes('joined') 
+                ?
                 <div key={index} className={index % 2 == 0 ? 'user-message' : 'user-message-left'}>
-                    <div className="message bg-primary">{m.msg}</div>
+                    <Chip icon={<FaceIcon />} color="primary" label={m.msg} />
                     <div className="from-user">{m.username}</div>
                 </div>               
+                : <div className="message-joined">{m.msg}</div>
             )}
         </div>
     )

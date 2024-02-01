@@ -52,7 +52,7 @@ function App() {
     try {
       await connection.stop();
     } catch (e) {
-      
+      console.log(e)
     }
   }
 
@@ -60,15 +60,13 @@ function App() {
     <div className='background'>
       <main>
         <Container>
-          {/* <Row className="px-5 my-5">
-            <Col>
-              <h1 className='form-title'>Welcome to my ChatApp!</h1>
-            </Col>
-          </Row>          
-          <hr className='line'/> */}
           {!connection  
-            ? <Lobby joinChatRoom={ joinChatRoom }></Lobby>
-            : <ChatRoom messages={messages} sendMessage={sendMessage} users={users} closeConnection={closeConnection}></ChatRoom>
+            ? <Lobby joinChatRoom={ joinChatRoom } />
+            : <ChatRoom 
+                messages={messages} 
+                sendMessage={sendMessage} 
+                users={users} 
+                closeConnection={closeConnection} />
           }
         </Container>
       </main>

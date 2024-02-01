@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8zw6v+HxEEu7znGf5SEaobjHxZTtuHNbNxT9WX0a1uSO1QxX7hBLuRzOPSJkvvBES2V1QLDdc9Y2VJcjcTXaOg==",
+  "dgSpecHash": "/cVC+FfVHi5yTRUh3pLz/19zzxWg71Oqaeq/luVytW0aKdeHUktvMn8D9G7OJUm9iy780wzFfectgPozUX/IOA==",
   "success": true,
-  "projectFilePath": "C:\\edu\\repositorios\\chat-app-react-dotnet\\ChatApp.Service\\ChatApp.Service.csproj",
+  "projectFilePath": "C:\\edu\\GIT\\chat-app-realtime-react-dotnet\\chat-app-service\\ChatApp.Service\\ChatApp.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luiz Brandão\\.nuget\\packages\\microsoft.aspnet.signalr.core\\2.4.3\\microsoft.aspnet.signalr.core.2.4.3.nupkg.sha512",
     "C:\\Users\\Luiz Brandão\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

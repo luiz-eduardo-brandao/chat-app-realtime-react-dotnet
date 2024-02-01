@@ -1,45 +1,36 @@
 import { Badge, ListGroup, Toast } from "react-bootstrap";
 
+import * as React from 'react';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemButton from '@mui/material/ListItemButton';
+import Avatar from '@mui/material/Avatar';
+import PersonIcon from '@mui/icons-material/Person';
+
 const ConnectedUsers = ({users}) => {
     return (
         <div className="user-list">
-            <h4>Users in Group</h4>
+            <h4>Users</h4>
 
-            <ListGroup as="ol">
+            <List className="mt-5 user-items" sx={{ width: '90%', maxWidth: 360, bgcolor: 'rgb(43, 47, 60)' }}>
+            {/* <ListGroup className="mt-5 user-items" as="ol"> */}
 
             { users.map( (user, i) => {
                 return (
-                    // <div className="user-container">
-                        
-                    //     <h6 key={i}>{user}</h6>
-
-                    
-                    <ListGroup.Item
-                        as="li"
-                        className="d-flex justify-content-between align-items-start"
-                        >
-                            <div className="ms-2 me-auto px-5 mb-2">
-                                <div className="fw-bold">{user}</div>
-                            </div>
-                            <Badge bg="primary" pill>
-                                {i+1}
-                            </Badge>
-                    </ListGroup.Item>
-                    
-
-                    // <Toast className="d-inline-block m-3" bg="dark">
-                    //     <Toast.Header bg="dark">
-                    //         {/* <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" /> */}
-                    //         <strong className="rounded me-auto">{user}</strong>
-                    //         <small>11 mins ago</small>
-                    //     </Toast.Header>
-                    //     <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
-                    // </Toast>
-                    // </div>
+                    <ListItem>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <PersonIcon />
+                            </ListItemIcon>
+                            <ListItemText primary={user} />
+                        </ListItemButton>
+                    </ListItem>
                 )
             } )}
 
-            </ListGroup>
+            </List>
         </div>
     )
 }

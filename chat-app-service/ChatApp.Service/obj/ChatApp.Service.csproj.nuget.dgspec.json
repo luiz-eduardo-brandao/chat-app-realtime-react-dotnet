@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\edu\\repositorios\\chat-app-react-dotnet\\ChatApp.Service\\ChatApp.Service.csproj": {}
+    "C:\\edu\\GIT\\chat-app-realtime-react-dotnet\\chat-app-service\\ChatApp.Service\\ChatApp.Service.csproj": {}
   },
   "projects": {
-    "C:\\edu\\repositorios\\chat-app-react-dotnet\\ChatApp.Service\\ChatApp.Service.csproj": {
+    "C:\\edu\\GIT\\chat-app-realtime-react-dotnet\\chat-app-service\\ChatApp.Service\\ChatApp.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\edu\\repositorios\\chat-app-react-dotnet\\ChatApp.Service\\ChatApp.Service.csproj",
+        "projectUniqueName": "C:\\edu\\GIT\\chat-app-realtime-react-dotnet\\chat-app-service\\ChatApp.Service\\ChatApp.Service.csproj",
         "projectName": "ChatApp.Service",
-        "projectPath": "C:\\edu\\repositorios\\chat-app-react-dotnet\\ChatApp.Service\\ChatApp.Service.csproj",
+        "projectPath": "C:\\edu\\GIT\\chat-app-realtime-react-dotnet\\chat-app-service\\ChatApp.Service\\ChatApp.Service.csproj",
         "packagesPath": "C:\\Users\\Luiz Brandão\\.nuget\\packages\\",
-        "outputPath": "C:\\edu\\repositorios\\chat-app-react-dotnet\\ChatApp.Service\\obj\\",
+        "outputPath": "C:\\edu\\GIT\\chat-app-realtime-react-dotnet\\chat-app-service\\ChatApp.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luiz Brandão\\AppData\\Roaming\\NuGet\\NuGet.Config",

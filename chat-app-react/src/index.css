@@ -8,6 +8,8 @@ body,html {
   
   background-color: #242424; */
 
+  font-family: 'Roboto';
+
   /* background-image: url('./assets/valley.jpeg'); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +18,7 @@ body,html {
   margin: 0px;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
