@@ -14,23 +14,35 @@ const ConnectedUsers = ({users}) => {
         <div className="user-list">
             <h4>Users</h4>
 
-            <List className="mt-5 user-items" sx={{ width: '90%', maxWidth: 360, bgcolor: 'rgb(43, 47, 60)' }}>
+            {/* <List className="mt-3 user-items" sx={{ width: '90%', maxWidth: 360, bgcolor: 'rgb(43, 47, 60)' }}> */}
             {/* <ListGroup className="mt-5 user-items" as="ol"> */}
+            <div className='mt-3'>
+                
 
             { users.map( (user, i) => {
                 return (
-                    <ListItem>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <PersonIcon />
-                            </ListItemIcon>
-                            <ListItemText primary={user} />
-                        </ListItemButton>
-                    </ListItem>
+                    <div className="user-items">
+                        <PersonIcon className="mb-2 mx-1"/>
+                        <div className="mx-4 mt-2">
+                            <h5>{user}</h5>
+                            <p>Team 12</p>
+                        </div>
+                    </div>
+                    // <ListItem>
+                    //     <ListItemButton>
+                    //         <ListItemIcon>
+                    //             <PersonIcon />
+                    //         </ListItemIcon>
+                    //         <ListItemText primary={user} />
+                    //     </ListItemButton>
+                    // </ListItem>
                 )
             } )}
 
-            </List>
+            
+        </div>
+
+            {/* </List> */}
         </div>
     )
 }

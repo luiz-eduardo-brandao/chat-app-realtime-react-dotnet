@@ -3,6 +3,8 @@ import MessageContainer from './MessageContainer';
 import SendMessageForm from './SendMessageForm';
 import '../index.css';
 import ConnectedUsers from './ConnectedUsers';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ChatHeader from './ChatHeader';
 
 const ChatRoom = ({messages, sendMessage, users, closeConnection}) => {
     return (
@@ -11,8 +13,9 @@ const ChatRoom = ({messages, sendMessage, users, closeConnection}) => {
                 <ConnectedUsers users={users} />
             </div>
             <div className='leave-room'>
-                <Button onClick={() => closeConnection()} variant='danger'>Leave Room</Button>
+                <Button onClick={() => closeConnection()} variant='outline-danger'><ArrowBackIosIcon /></Button>
             </div>
+            {/* <ChatHeader /> */}
             <div className='chat'>
                 <MessageContainer messages={messages} />
                 <SendMessageForm sendMessage={sendMessage} />
