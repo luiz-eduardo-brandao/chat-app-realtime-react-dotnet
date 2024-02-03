@@ -2,9 +2,10 @@ import { useEffect, useRef } from "react";
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import FaceIcon from '@mui/icons-material/Face';
+import DoneIcon from '@mui/icons-material/Done';
 
 
-const MessageContainer = ({messages}) => {
+const MessageContainer = ({messages, username}) => {
     const messageRef = useRef();
 
     useEffect(() => {
@@ -34,15 +35,62 @@ const MessageContainer = ({messages}) => {
     var today = curHour + ":" + curMinute + "." + curSeconds + curMeridiem + " " + dayOfWeek + " " + dayOfMonth + " of " + curMonth + ", " + curYear;
 
 
+    const sameUser = (index, username) => {
+        console.log('messages: ', messages)
+        console.log('index: ', index)
+        console.log('username: ', username)
+
+       if(index != null && index > 0) {
+            let currentUser = messages[index]
+            let lastUser = messages[index - 1]
+
+            if (!lastUser) return true
+
+            if (lastUser.username == 'admin' && currentUser.username == username) {
+                return true
+            }
+
+            if (currentUser.username == username) return true;
+
+            return false;
+
+            // console.log('else lastUser: ', lastUser)
+            // console.log('else currentUser: ', currentUser)
+            // console.log('else username: ', username)
+
+            // if (lastUser.username != username) return true
+            // else return false
+
+            // return lastUser.username == username
+            
+       }
+
+       return true
+    }
+
     return (
         <div ref={messageRef} className="message-container">
             <div className="message-date mb-2">{today}</div>
             { messages.map((m, index) => 
                 !m.msg.includes('joined') 
-                ?
-                <div key={index} className={index % 2 == 0 ? 'user-message' : 'user-message-left'}>
-                    <Chip icon={<FaceIcon />} color="primary" label={m.msg} />
-                    <div className="from-user">{m.username}</div>
+                ?<div key={index} className={sameUser(index, username) ? 'user-message' : 'user-message-left'}>
+                    {/* <Chip 
+                        icon={<FaceIcon />} 
+                        label={m.msg}
+                        color="primary" 
+                        sx={{
+                            height: '50px',
+                            width: '90px',
+                            '& .MuiChip-label': {
+                              display: 'block',
+                              whiteSpace: 'normal',
+                            },
+                          }}
+                    /> */}
+                    <div className="message">
+                        {m.msg}
+                    </div>
+                    <div className="from-user mx-2">{m.username}</div>
                 </div>               
                 : <div className="message-joined">{m.msg}</div>
             )}

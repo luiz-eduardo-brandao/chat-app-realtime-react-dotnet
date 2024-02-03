@@ -5,6 +5,7 @@
   /* Vertical center */
   display: table-cell;
   vertical-align: middle;
+  margin: 30%;
 }
 
 .form-card {
@@ -93,6 +94,17 @@ Form Button {
   /* height: 35px; */ 
 }
 
+.user-container {
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: left; */
+  /* float: left; */
+  /* background-color: #313131; */
+  /* background: rgb(43, 47, 60); */
+  border-radius: 8px;
+  color: #eee;
+}
+
 .user-list {
   display: flex;
   flex-direction: column;
@@ -103,21 +115,28 @@ Form Button {
   border-radius: 8px;
   color: #eee;
   width: 30%;
-  /* max-height: 460px; */
+  height: 620px;
   margin-right: 35px;
+  overflow: auto;
+}
+
+.user-list::-webkit-scrollbar {
+  display: none;
 }
 
 .user-items {
-  padding: 15px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: flex-start;  
   background: rgb(43, 47, 60);
   border-radius: 8px;
+  margin-top: 6px;
   margin-bottom: 6px;
   font-weight: 300;
   font-size: 1.3rem;
   box-shadow: 4px 5px rgba(0, 0, 0, 0.2);
+  height: 80px;
 }
 
 .user-items:hover {
@@ -127,13 +146,6 @@ Form Button {
 
 .user-items::-webkit-scrollbar {
   display: none;
-}
-
-
-.user-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .user-img {
@@ -179,10 +191,15 @@ Form Button {
 
 .message {
   display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0px auto 0px auto;
-  padding: 10px;
+  padding: 20px;
   color: white;
-  border-radius: 17px;
+  border-radius: 17px;  
+  background-color: dodgerblue;
+  max-height: 50px;
+  font-weight: 400;
 }
 
 .message-date {
@@ -198,7 +215,9 @@ Form Button {
   justify-content: center;
   color: #eee;
   font-size: 0.8rem;
+  margin-bottom: 16px;
 }
+
 
 .from-user {
   color: #eee;

@@ -10,6 +10,8 @@ function App() {
   const[connection, setConnection] = useState();
   const[messages, setMessages] = useState([]);
   const[users, setUsers] = useState([]);
+  const[username, setUsername] = useState('');
+  const[chatroom, setChatroom] = useState('');
 
   const joinChatRoom = async (username, chatroom) => {
     try {
@@ -34,6 +36,10 @@ function App() {
 
       await connection.start();
       await connection.invoke("JoinSpecificChatRoom", {username, chatroom});
+
+      setUsername(username);
+      setChatroom(chatroom);
+
       setConnection(connection);
     } catch(e) {
       console.log(e)
@@ -63,7 +69,9 @@ function App() {
           {!connection  
             ? <Lobby joinChatRoom={ joinChatRoom } />
             : <ChatRoom 
-                messages={messages} 
+                messages={messages}
+                username={username}
+                chatroom={chatroom} 
                 sendMessage={sendMessage} 
                 users={users} 
                 closeConnection={closeConnection} />
