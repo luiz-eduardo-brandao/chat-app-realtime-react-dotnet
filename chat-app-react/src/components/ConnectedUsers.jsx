@@ -12,8 +12,7 @@ import PersonIcon from '@mui/icons-material/Person';
 const ConnectedUsers = ({users, chatroom}) => {
     return (
         <div className="user-list">
-            <h4>Users</h4>
-
+            <h4>Group: {chatroom}</h4>
             {/* <List className="mt-3 user-items" sx={{ width: '90%', maxWidth: 360, bgcolor: 'rgb(43, 47, 60)' }}> */}
             {/* <ListGroup className="mt-5 user-items" as="ol"> */}
             <div className='mt-3'>
@@ -25,7 +24,7 @@ const ConnectedUsers = ({users, chatroom}) => {
                         <PersonIcon className="mb-2 mx-1"/>
                         <div className="mx-4 mt-2">
                             <h5>{user}</h5>
-                            <p>{chatroom}</p>
+                            {/* <p>{chatroom}</p> */}
                         </div>
                     </div>
                     // <ListItem>
