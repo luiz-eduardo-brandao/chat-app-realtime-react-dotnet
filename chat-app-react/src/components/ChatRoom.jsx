@@ -9,7 +9,7 @@ const ChatRoom = ({messages, sendMessage, users, closeConnection, username, chat
     return (
         <div>
             <div>
-                <ConnectedUsers users={users} />
+                <ConnectedUsers users={users} chatroom={chatroom} />
             </div>
             <div className='leave-room'>
                 <Button onClick={() => closeConnection()} variant='outline-danger'><ArrowBackIosIcon /></Button>

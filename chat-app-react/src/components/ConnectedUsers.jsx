@@ -9,7 +9,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import Avatar from '@mui/material/Avatar';
 import PersonIcon from '@mui/icons-material/Person';
 
-const ConnectedUsers = ({users}) => {
+const ConnectedUsers = ({users, chatroom}) => {
     return (
         <div className="user-list">
             <h4>Users</h4>
@@ -25,7 +25,7 @@ const ConnectedUsers = ({users}) => {
                         <PersonIcon className="mb-2 mx-1"/>
                         <div className="mx-4 mt-2">
                             <h5>{user}</h5>
-                            <p>Team 12</p>
+                            <p>{chatroom}</p>
                         </div>
                     </div>
                     // <ListItem>
