@@ -78,7 +78,8 @@ Form Button {
 
 .leave-room {
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
+  justify-content: space-between;
   /* text-align: right; */
   margin-bottom: 6px;
 }
@@ -142,6 +143,7 @@ Form Button {
 .user-items:hover {
   font-weight: 500;
   background: dodgerblue;
+  cursor: pointer;
 }
 
 .user-items::-webkit-scrollbar {
@@ -152,6 +154,23 @@ Form Button {
   margin-right: 20px;
   background-color: #eee;
   border-radius: 21px;
+}
+
+.chat-room-title {
+  /* align-self: center; */
+  text-align: center;
+  font-size: 42px; 
+  /* font-family: 'Avenir';  */
+  font-weight: 300; 
+  letter-spacing: 0.5px; 
+  color: #e8e8e8; 
+  padding-bottom: 12px; 
+  margin-bottom: 3%;
+}
+
+.chat-room-name { 
+  font-weight: 300; 
+  color: #e8e8e8; 
 }
 
 .chat {
